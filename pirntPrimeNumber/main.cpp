@@ -3,6 +3,10 @@ using namespace std;
 //判断是不是素数
 int checkPrimeNumber(int n) {
 	int j;
+	//先判断能不能被2整除，且不是2
+	if (n % 2 == 0 && n != 2) {
+		return 0;
+	}
 	for (j = 2; j < n / 2; j++) {
 		if (n%j == 0) {
 			return 0;
